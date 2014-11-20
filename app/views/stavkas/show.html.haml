@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Naziv:
+  = @stavka.naziv
+%p
+  %b Iznos:
+  = @stavka.iznos
+%p
+  %b Faktura:
+  = @stavka.faktura_id
+
+= link_to 'Edit', edit_stavka_path(@stavka)
+\|
+= link_to 'Back', stavkas_path

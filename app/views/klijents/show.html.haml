@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Naziv:
+  = @klijent.naziv
+
+= link_to 'Edit', edit_klijent_path(@klijent)
+\|
+= link_to 'Back', klijents_path

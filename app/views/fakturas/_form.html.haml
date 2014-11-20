@@ -1,0 +1,10 @@
+= simple_form_for @faktura do |f|
+  = f.input :naziv
+  = f.input :klijent_id
+  %h3 Stavkas
+  #stavkas
+    = f.simple_fields_for :stavkas do |stavka|
+      = render 'stavka_fields', :f => stavka
+    .links
+      = link_to_add_association 'Dodaj stavku', f, :stavkas
+  = f.submit

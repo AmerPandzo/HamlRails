@@ -1,0 +1,13 @@
+= form_for @klijent do |f|
+  - if @klijent.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@klijent.errors.count, "error")} prohibited this klijent from being saved:"
+      %ul
+        - @klijent.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :naziv
+    = f.text_field :naziv
+  .actions
+    = f.submit 'Save'

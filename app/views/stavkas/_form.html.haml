@@ -1,0 +1,19 @@
+= form_for @stavka do |f|
+  - if @stavka.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@stavka.errors.count, "error")} prohibited this stavka from being saved:"
+      %ul
+        - @stavka.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :naziv
+    = f.text_field :naziv
+  .field
+    = f.label :iznos
+    = f.number_field :iznos
+  .field
+    = f.label :faktura_id
+    = f.number_field :faktura_id
+  .actions
+    = f.submit 'Save'

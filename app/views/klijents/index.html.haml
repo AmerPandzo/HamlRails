@@ -1,0 +1,19 @@
+%h1 Listing klijents
+
+%table
+  %tr
+    %th Naziv
+    %th
+    %th
+    %th
+
+  - @klijents.each do |klijent|
+    %tr
+      %td= klijent.naziv
+      %td= link_to 'Show', klijent
+      %td= link_to 'Edit', edit_klijent_path(klijent)
+      %td= link_to 'Destroy', klijent, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Klijent', new_klijent_path

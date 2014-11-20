@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Naziv:
+  = @faktura.naziv
+%p
+  %b Klijent:
+  = @faktura.klijent_id
+
+= link_to 'Edit', edit_faktura_path(@faktura)
+\|
+= link_to 'Back', fakturas_path

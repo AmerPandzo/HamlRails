@@ -1,0 +1,21 @@
+%h1 Listing fakturas
+
+%table
+  %tr
+    %th Naziv
+    %th Klijent
+    %th
+    %th
+    %th
+
+  - @fakturas.each do |faktura|
+    %tr
+      %td= faktura.naziv
+      %td= faktura.klijent_id
+      %td= link_to 'Show', faktura
+      %td= link_to 'Edit', edit_faktura_path(faktura)
+      %td= link_to 'Destroy', faktura, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faktura', new_faktura_path

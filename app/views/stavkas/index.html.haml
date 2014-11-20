@@ -1,0 +1,23 @@
+%h1 Listing stavkas
+
+%table
+  %tr
+    %th Naziv
+    %th Iznos
+    %th Faktura
+    %th
+    %th
+    %th
+
+  - @stavkas.each do |stavka|
+    %tr
+      %td= stavka.naziv
+      %td= stavka.iznos
+      %td= stavka.faktura_id
+      %td= link_to 'Show', stavka
+      %td= link_to 'Edit', edit_stavka_path(stavka)
+      %td= link_to 'Destroy', stavka, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Stavka', new_stavka_path

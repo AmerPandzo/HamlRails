@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  naziv: MyString
+  iznos: 1
+  faktura_id: 1
+
+two:
+  naziv: MyString
+  iznos: 1
+  faktura_id: 1
