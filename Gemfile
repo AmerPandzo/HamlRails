@@ -41,4 +41,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'country_select'
-gem "cocoon"
+gem 'cocoon'
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+gem 'sprockets-rails'

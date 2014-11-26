@@ -28,6 +28,10 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (4.0.1)
+      execjs
+    bootstrap-sass (3.3.1.0)
+      sass (~> 3.2)
     builder (3.2.2)
     cocoon (1.2.6)
     coffee-rails (4.0.1)
@@ -125,6 +129,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  autoprefixer-rails
+  bootstrap-sass (~> 3.3.1)
   cocoon
   coffee-rails (~> 4.0.0)
   country_select
@@ -136,6 +142,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   simple_form
+  sprockets-rails
   sqlite3
   turbolinks
   tzinfo-data

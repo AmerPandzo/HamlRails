@@ -1,6 +1,6 @@
-%h1 Listing fakturas
+%h1 Spisak svih faktura
 
-%table
+%table{:border => "1",:cellpadding => "0" , :cellspacing => "0" ,:width => "100%"}
   %tr
     %th Naziv
     %th Klijent
@@ -12,10 +12,10 @@
     %tr
       %td= faktura.naziv
       %td= faktura.klijent_id
-      %td= link_to 'Show', faktura
-      %td= link_to 'Edit', edit_faktura_path(faktura)
-      %td= link_to 'Destroy', faktura, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Prikaži', faktura
+      %td= link_to 'Uredi', edit_faktura_path(faktura)
+      %td= link_to 'Izbriši', faktura, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Faktura', new_faktura_path
+= link_to 'Nova Faktura', new_faktura_path
